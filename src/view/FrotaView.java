@@ -129,6 +129,8 @@ public class FrotaView {
 						, Integer.parseInt(tfTempoParado.getText()));
 				
 				frota.get(tfPlacaManutencao.getText()).addManutencao(m);
+				
+				JOptionPane.showMessageDialog(null, "Manutção cadastrada");
 			}
 		});
 		btnCadastrarManutencao.setBounds(10, 513, 174, 40);
@@ -144,10 +146,12 @@ public class FrotaView {
 					if(!frota.containsKey(v.getPlaca())) {
 						frota.put(v.getPlaca(), v);
 					}
+					JOptionPane.showMessageDialog(null, "Veículo cadastrado");
 				} catch (ParseException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
+				
 			}
 		});
 		btnCadastrarVeculo.setBounds(10, 175, 159, 42);
